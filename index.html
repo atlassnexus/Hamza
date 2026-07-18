@@ -7,6 +7,113 @@
     <meta name="theme-color" content="#5b3df5">
     <title>Le club de Hamza</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css?v=20260718-3">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <header class="site-header">
+      <div class="notice-bar">
+        <span aria-hidden="true">⚽</span>
+        Le terrain des découvertes de Hamza
+        <span aria-hidden="true">⭐</span>
+      </div>
+      <div class="header-inner">
+        <a class="brand" href="#accueil" aria-label="Accueil du club de Hamza">
+          <img class="brand-logo" src="assets/logo-hamza-header.svg?v=20260718-3" alt="" aria-hidden="true">
+          <span>
+            <strong>Le club de Hamza</strong>
+            <small>Apprendre • Jouer • Marquer des idées !</small>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-principale">
+          <span class="sr-only">Ouvrir le menu</span>
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="navigation-principale" class="main-nav" aria-label="Navigation principale">
+          <a href="#accueil" data-route="accueil"><span aria-hidden="true">🏠</span> Accueil</a>
+          <a href="#matieres" data-route="matieres"><span aria-hidden="true">🎒</span> Matières</a>
+          <a href="#parascolaire" data-route="parascolaire"><span aria-hidden="true">⚽</span> Activités</a>
+          <a href="#ressources" data-route="ressources"><span aria-hidden="true">🎬</span> Ressources</a>
+          <a href="#reglement" data-route="reglement"><span aria-hidden="true">🛡️</span> Règles</a>
+          <button class="nav-member" type="button" data-action="open-member"><span aria-hidden="true">🚀</span> Mon espace</button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu" tabindex="-1"></main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <section>
+          <a class="brand footer-brand" href="#accueil">
+            <img class="brand-logo" src="assets/logo-hamza.svg?v=20260718-2" alt="" aria-hidden="true">
+            <span><strong>Le club de Hamza</strong><small>Projet familial éducatif</small></span>
+          </a>
+          <p>Le terrain numérique où Hamza partage ses découvertes de 5P, ses défis et sa passion du football.</p>
+        </section>
+        <section>
+          <h2>Explorer</h2>
+          <a href="#matieres">Activités scolaires</a>
+          <a href="#parascolaire">Activités parascolaires</a>
+          <a href="#ressources">Ressources éducatives</a>
+          <a href="#reglement">Règlement de l’école</a>
+        </section>
+        <section>
+          <h2>Protection</h2>
+          <a href="#securite">Sécurité et règles</a>
+          <a href="#confidentialite">Confidentialité</a>
+          <a href="#apropos">À propos et contact adulte</a>
+          <button class="link-button" type="button" data-action="report">Signaler un problème</button>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="current-year"></span> Le club de Hamza</span>
+        <span>Aucune publicité · Aucun pistage · Aucun profil public d’enfant</span>
+      </div>
+    </footer>
+
+    <dialog id="member-dialog" class="modal">
+      <button class="modal-close" type="button" data-action="close-modal" aria-label="Fermer">×</button>
+      <div id="member-dialog-content"></div>
+    </dialog>
+
+    <dialog id="report-dialog" class="modal modal-small">
+      <button class="modal-close" type="button" data-action="close-modal" aria-label="Fermer">×</button>
+      <span class="eyebrow">Besoin d’aide ?</span>
+      <h2>Signaler un problème</h2>
+      <p>Ne partage aucune information personnelle. En cas de danger, parle immédiatement à un adulte de confiance.</p>
+      <form id="report-form">
+        <label for="report-type">Type de problème</label>
+        <select id="report-type" required>
+          <option value="">Choisir…</option>
+          <option>Contenu incorrect</option>
+          <option>Lien qui ne fonctionne pas</option>
+          <option>Message inapproprié</option>
+          <option>Problème de sécurité</option>
+        </select>
+        <label for="report-message">Courte description</label>
+        <textarea id="report-message" maxlength="400" required></textarea>
+        <button class="button button-primary" type="submit">Envoyer au responsable adulte</button>
+      </form>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <noscript>Ce site a besoin de JavaScript pour afficher ses différentes rubriques.</noscript>
+  </body>
+</html>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Le bureau numérique scolaire et parascolaire de Hamza, élève de 5P à Genève.">
+    <meta name="theme-color" content="#5b3df5">
+    <title>Le club de Hamza</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css?v=20260718-2">
     <script src="app.js" defer></script>
   </head>
